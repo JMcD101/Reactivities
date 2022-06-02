@@ -1,3 +1,6 @@
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using Application.Core;
 using Application.Interfaces;
 using AutoMapper;
@@ -26,7 +29,6 @@ namespace Application.Activities
             _mapper = mapper;
             _context = context;
             }
-
             public async Task<Result<PagedList<ActivityDto>>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var query = _context.Activities

@@ -66,7 +66,8 @@ namespace API
                 .StyleSources(s => s.Self().CustomSources(
                     "https://fonts.googleapis.com",
                     "https://cdnjs.cloudflare.com",
-                    "sha256-yChqzBduCCi4o4xdbXRXh4U/t1rP4UUUMJt+rB+ylUI="
+                    "sha256-yChqzBduCCi4o4xdbXRXh4U/t1rP4UUUMJt+rB+ylUI=",
+                    "sha256-r3x6D0yBZdyG8FpooR5ZxcsLuwuJ+pSQ/80YzwXS5IU="
                 ))
                 .FontSources(s => s.Self().CustomSources(
                     "https://fonts.gstatic.com",
@@ -78,7 +79,8 @@ namespace API
                 .ImageSources(s => s.Self().CustomSources(
                     "https://res.cloudinary.com",
                     "https://www.facebook.com",
-                    "data:"))
+                    "data:",
+                    "https://scontent-iad3-2.xx.fbcdn.net"))
                 .ScriptSources(s => s.Self().CustomSources(
                     "sha256-ckWAewGy/fGz3IFve1V2j8t/tENM5o2LxDI/YJIM+FI=",
                     "https://connect.facebook.net"

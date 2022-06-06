@@ -24,7 +24,7 @@ namespace API.Extensions
            {
                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "v1" });
            });
-            services.AddDbContext<DataContext>(options =>
+            services.AddDbContext<DataContext>(opt =>
 {
     var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
@@ -58,7 +58,7 @@ namespace API.Extensions
 
     // Whether the connection string came from the local development configuration file
     // or from the environment variable from Heroku, use it to set up your DbContext.
-    options.UseNpgsql(connStr);
+    opt.UseNpgsql(connStr);
 });
 
             services.AddCors(opt =>
@@ -69,7 +69,7 @@ namespace API.Extensions
                         .AllowAnyMethod()
                         .AllowAnyHeader()
                         .AllowCredentials()
-                        .WithOrigins("http://localhost:3000");
+                        .WithOrigins("http://localhost:3000/");
                 });
             });
             services.AddMediatR(typeof(List.Handler).Assembly);
